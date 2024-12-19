@@ -3,7 +3,7 @@
 ## Prerequisites
 
 - Clone/download/fork the `ptcgp-sim` repository
-- Python installation
+- [Python installation](https://wiki.python.org/moin/BeginnersGuide/Download)
 
 Run the following commands from your local `ptcgp-sim` directory:
 
