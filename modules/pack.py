@@ -27,26 +27,29 @@ class Pack:
         # normalize probabilities to sum to 1 (accounts for rounding error summing to 0.99999...)
         self.probs = utils.probability.normalize_probabilities(self.probs, axis=1)
 
-    def open(self):
+    def open(self, instantaneous):
         if self.unopened:
             sys.stdout.write("Opening pack!\n")
-            time.sleep(0.5)
+            if not instantaneous:
+                time.sleep(0.5)
             rare_pack_check = np.random.rand()
             if rare_pack_check < self.rare_pack_rate: # RARE PACK
                 for x in range(5):
                     sys.stdout.write(f"WOOWWWWW YOU GOT A RARE PACK!!! This only occurs {self.rare_pack_rate*100}% of the time!!\n")
                     card = np.random.choice(self.available, 1, replace=True, p=self.probs[5])
                     sys.stdout.write(f"Opened: {card}!\n")
-                    time.sleep(0.5)
+                    if not instantaneous:
+                        time.sleep(0.5)
                     self.cards.append(card)
             else: # REGULAR PACK
                 for x in range(5):
                     card = np.random.choice(self.available, 1, replace=True, p=self.probs[x])[0]
                     sys.stdout.write(f"Opened: {card}!\n")
-                    time.sleep(0.5)
+                    if not instantaneous:
+                        time.sleep(0.5)
                     self.cards.append(card)
 
-            sys.stdout.write(f"Summary: {str(self.cards)}\n")
+            sys.stdout.write(f"Summary: {str(self.cards)}\n\n")
             return self.cards
         else:
             sys.stderr.write("Can't open pack that has already been unsealed... (mitchell check your code, this shouldn't happen)\n")
