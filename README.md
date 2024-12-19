@@ -3,7 +3,7 @@
 ## Prerequisites
 
 - Clone/download/fork the `ptcgp-sim` repository
-- [Python installation](https://wiki.python.org/moin/BeginnersGuide/Download)
+- [Install Python](https://wiki.python.org/moin/BeginnersGuide/Download)
 
 Run the following commands from your local `ptcgp-sim` directory:
 
@@ -23,5 +23,5 @@ python3 ./main.py
 
 Optional args:
 
-- `--no-wait` (coming soon): remove all waits and continue prompts from pack opening
+- `--no-wait` (coming soon): remove all waits and "continue" prompts from pack opening
   - Example: `python3 ./main.py --no-wait`
