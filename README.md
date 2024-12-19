@@ -23,5 +23,5 @@ python3 ./main.py
 
 Optional args:
 
-- `--no-wait` (coming soon): remove all waits and "continue" prompts from pack opening
-  - Example: `python3 ./main.py --no-wait`
+- `--express-mode` or `-e`: open packs instantaneously by removing waits and "continue" prompts
+  - Example: `python3 ./main.py --express-mode` or `python3 ./main.py -e`

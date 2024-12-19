@@ -1,4 +1,5 @@
 from datetime import datetime
+import getopt
 import time
 import sys
 
@@ -8,6 +9,13 @@ from modules.pack import Pack
 from utils.fileio import load_expansions
 
 def main():
+    arguments = sys.argv[1:]
+    short_opts = "e"
+    long_opts = ["express-mode"]
+    selected_opts, vals = getopt.getopt(arguments, short_opts, long_opts)
+    flags = [key for key, val in selected_opts if val == '']
+    in_express_mode = "--express-mode" in flags or "-e" in flags
+
     all_expansions = load_expansions('./expansion-files/mythical-island.json')
 
     expansion = prompt_expansion_selection(all_expansions)
@@ -18,14 +26,15 @@ def main():
     num_packs = prompt_number_of_packs(expansion, all_expansions)
 
     sys.stdout.write(f"Opening {num_packs} packs of {expansion}!\n")
-    time.sleep(1.5)
+    if not in_express_mode:
+        time.sleep(1.5)
     collection = Collection()
     packs = [Pack(pack_type.name, pack_type.available, pack_type.pull_rates, pack_type.rare_pack_rate) for _ in range(num_packs)]
     for x, pack in enumerate(packs):
-        received = pack.open()
+        received = pack.open(instantaneous=in_express_mode)
         for card in received:
             collection.add(card)
-        if x < len(packs) - 1:
+        if x < len(packs) - 1 and not in_express_mode:
             input("\nPress any character to continue...")
 
     sys.stdout.write("Summary of final results:\n")
