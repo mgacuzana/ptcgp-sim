@@ -7,6 +7,38 @@ from modules.expansion import Expansion
 from modules.pack import Pack
 from utils.fileio import load_expansions
 
+def main():
+    all_expansions = load_expansions('./expansion-files/mythical-island.json')
+
+    expansion = prompt_expansion_selection(all_expansions)
+    pack_type = prompt_pack_selection(expansion, all_expansions)
+    sys.stdout.write(f"===== AVAILABLE CARDS IN {expansion.name} {[pack_type.name]} =====\n")
+    sys.stdout.write(str(pack_type.available))
+    sys.stdout.write("\n")
+    num_packs = prompt_number_of_packs(expansion, all_expansions)
+
+    sys.stdout.write(f"Opening {num_packs} packs of {expansion}!\n")
+    time.sleep(1.5)
+    collection = Collection()
+    packs = [Pack(pack_type.name, pack_type.available, pack_type.pull_rates, pack_type.rare_pack_rate) for _ in range(num_packs)]
+    for x, pack in enumerate(packs):
+        received = pack.open()
+        for card in received:
+            collection.add(card)
+        if x < len(packs) - 1:
+            input("\nPress any character to continue...")
+
+    sys.stdout.write("Summary of final results:\n")
+    sys.stdout.write(str(collection))
+
+    # TODO: Add save collection to file
+    #     
+    # save_desired = input("\nSave results to file? (y/n, default n)\n")
+    # if len(save_desired) > 0 and save_desired[0] == 'y':
+    #     save_filename = input("File name (default is collection-{timestamp}.json): ")
+    #     if len(save_filename) == 0:
+    #         save_filename = f"collection-{datetime.now()}.json"
+
 def prompt_expansion_selection(expansions):
     """
         @arg expansions: list of nested objects representing expansion json
@@ -67,36 +99,7 @@ def prompt_number_of_packs(expansion, all_expansions):
     return num_packs
 
 if __name__ == "__main__":
-    all_expansions = load_expansions('./expansion-files/mythical-island.json')#, './expansion-files/genetic-apex.json') # mitchell: dynamically read all jsons in expansion-files? worth the effort?
-
-    expansion = prompt_expansion_selection(all_expansions)
-    pack_type = prompt_pack_selection(expansion, all_expansions)
-    sys.stdout.write(f"===== AVAILABLE CARDS IN {expansion.name} {[pack_type.name]} =====\n")
-    sys.stdout.write(str(pack_type.available))
-    sys.stdout.write("\n")
-    num_packs = prompt_number_of_packs(expansion, all_expansions)
-
-    sys.stdout.write(f"Opening {num_packs} packs of {expansion}!\n")
-    time.sleep(1.5)
-    collection = Collection()
-    packs = [Pack(pack_type.name, pack_type.available, pack_type.pull_rates, pack_type.rare_pack_rate) for _ in range(num_packs)]
-    for x, pack in enumerate(packs):
-        received = pack.open()
-        for card in received:
-            collection.add(card)
-        if x < len(packs) - 1:
-            input("\nPress any character to continue...")
-
-    sys.stdout.write("Summary of final results:\n")
-    sys.stdout.write(str(collection))
-
-    # TODO: Add save collection to file
-    #     
-    # save_desired = input("\nSave results to file? (y/n, default n)\n")
-    # if len(save_desired) > 0 and save_desired[0] == 'y':
-    #     save_filename = input("File name (default is collection-{timestamp}.json): ")
-    #     if len(save_filename) == 0:
-    #         save_filename = f"collection-{datetime.now()}.json"
+    main()
 
         
         
