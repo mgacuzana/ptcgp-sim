@@ -9,13 +9,7 @@ from modules.pack import Pack
 from utils.fileio import load_expansions, save_collection
 
 def main():
-    arguments = sys.argv[1:]
-    short_opts = "b"
-    long_opts = ["batch-mode"]
-    selected_opts, vals = getopt.getopt(arguments, short_opts, long_opts)
-    flags = [key for key, val in selected_opts if val == '']
-    in_batch_mode = "--batch-mode" in flags or "-b" in flags
-
+    in_batch_mode = handle_opts()
     all_expansions = load_expansions("genetic-apex.json", "mythical-island.json")
 
     expansion = prompt_expansion_selection(all_expansions)
@@ -43,6 +37,14 @@ def main():
 
     prompt_save_collection(collection)
 
+def handle_opts():
+    arguments = sys.argv[1:]
+    short_opts = "b"
+    long_opts = ["batch-mode"]
+    selected_opts, vals = getopt.getopt(arguments, short_opts, long_opts)
+    flags = [key for key, val in selected_opts if val == '']
+    in_batch_mode = "--batch-mode" in flags or "-b" in flags
+    return in_batch_mode
 
 def prompt_expansion_selection(expansions):
     """
