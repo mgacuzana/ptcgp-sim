@@ -1,9 +1,13 @@
+from pathlib import Path
 import json
+import os
+import sys
 
 from consts import rarity_str_to_enum
 from modules.expansion import Expansion
 from modules.pack import Pack
 from modules.card import Card
+from modules.collection import Collection
 
 def load_expansions(*args):
     """
@@ -11,8 +15,11 @@ def load_expansions(*args):
         @returns objects representing all expansion
     """
     expansions = []
+    current = Path(".")
+    expansions_path = current / "expansion-files"
     for filename in args:
-        file = open(filename)
+        full_path = expansions_path / filename
+        file = open(full_path)
         exp_json = json.load(file)
         name = exp_json["name"]
         set_code = exp_json["set_code"]
@@ -39,7 +46,33 @@ def load_expansions(*args):
             packs.append(pack)
 
         expansions.append(Expansion(name, set_code, packs))
+    expansions.sort(key=lambda exp: exp.set_code)
     return expansions
+
+def save_collection(filename, collection, overwrite=False):
+    base_path = get_script_folder() / "collections"
+    if not os.path.exists(base_path):
+        os.makedirs(base_path)
+
+    full_path = base_path / filename
+    if os.path.exists(full_path) and not overwrite:
+        return False
+    else:
+        with full_path.open('w', encoding="utf-8") as file:
+            file.write(str(collection))
+            sys.stdout.write(f"Saved collection to {full_path}!")
+            return True
+        return False
+
+def get_script_folder():
+    # path of main .py or .exe when converted with pyinstaller
+    if getattr(sys, 'frozen', False):
+        script_path = Path(os.path.dirname(sys.executable))
+    else:
+        script_path = Path(os.path.dirname(
+            os.path.abspath(sys.modules['__main__'].__file__)
+        ))
+    return script_path
 
 def _handle_rarity_json(rarity_json):
     rarity_rate = {}

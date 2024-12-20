@@ -16,7 +16,11 @@ class Collection:
 
     def __str__(self):
         string = "{\n"
-        for card, count in self.items():
-            string += f"\t{str(card)}: {str(count)}\n"
+        tuples = self.items()
+        for card, count in tuples:
+            string += f"\t\"{str(card)}\": {str(count)},\n"
+        if len(tuples) > 0:
+            string = string[:-2]
+            string += "\n"
         string += "}"
         return string
