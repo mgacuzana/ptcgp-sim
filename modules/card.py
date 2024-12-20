@@ -40,5 +40,5 @@ def parse_card_str(card_str):
     pattern = re.compile(r'([\w ]+) \(([◊☆♕]+) (\w+)\)')
     matches = pattern.match(card_str)
     if not matches:
-        raise Exception(f"{card_str} does not match pattern {pattern}")
+        raise ValueError(f"{card_str} does not match pattern {pattern}")
     return Card(matches.group(1), parse_rarity_str(matches.group(2)), matches.group(3))
