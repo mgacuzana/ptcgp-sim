@@ -1,0 +1,2098 @@
+{
+    "name": "Genetic Apex (A1)",
+    "set_code": "A1",
+    "packs": [
+        {
+            "name": "Mewtwo",
+            "rare_pack_rate": 0.00050,
+            "card_rates": {
+                "card1": {
+                    "1diamond": 0.02000,
+                    "2diamond": 0.0,
+                    "3diamond": 0.0,
+                    "4diamond": 0.0,
+                    "1star": 0.0,
+                    "2star": 0.0,
+                    "3star": 0.0,
+                    "crown": 0.0
+                },
+                "card2": {
+                    "1diamond": 0.02000,
+                    "2diamond": 0.0,
+                    "3diamond": 0.0,
+                    "4diamond": 0.0,
+                    "1star": 0.0,
+                    "2star": 0.0,
+                    "3star": 0.0,
+                    "crown": 0.0
+                },
+                "card3": {
+                    "1diamond": 0.02000,
+                    "2diamond": 0.0,
+                    "3diamond": 0.0,
+                    "4diamond": 0.0,
+                    "1star": 0.0,
+                    "2star": 0.0,
+                    "3star": 0.0,
+                    "crown": 0.0
+                },
+                "card4":
+                {
+                    "1diamond": 0.0,
+                    "2diamond": 0.02571,
+                    "3diamond": 0.00357,
+                    "4diamond": 0.00333,
+                    "1star": 0.00321,
+                    "2star": 0.00055,
+                    "3star": 0.00222,
+                    "crown": 0.00013
+                },
+                "card5": {
+                    "1diamond": 0.0,
+                    "2diamond": 0.01714,
+                    "3diamond": 0.01428,
+                    "4diamond": 0.01332,
+                    "1star": 0.01268,
+                    "2star": 0.00222,
+                    "3star": 0.00888,
+                    "crown": 0.00053
+                },
+                "rare": {
+                    "1diamond": 0.0,
+                    "2diamond": 0.0,
+                    "3diamond": 0.0,
+                    "4diamond": 0.0,
+                    "1star": 0.05263,
+                    "2star": 0.05263,
+                    "3star": 0.05263,
+                    "crown": 0.05263
+                }
+            },
+            "cards": [
+                {
+                    "name": "Bulbasaur",
+                    "rarity": "1diamond",
+                    "id": "A1001"
+                },
+                {
+                    "name": "Ivysaur",
+                    "rarity": "2diamond",
+                    "id": "A1002"
+                },
+                {
+                    "name": "Venusaur",
+                    "rarity": "3diamond",
+                    "id": "A1003"
+                },
+                {
+                    "name": "Venusaur ex",
+                    "rarity": "4diamond",
+                    "id": "A1004"
+                },
+                {
+                    "name": "Weedle",
+                    "rarity": "1diamond",
+                    "id": "A1008"
+                },
+                {
+                    "name": "Kakuna",
+                    "rarity": "1diamond",
+                    "id": "A1009"
+                },
+                {
+                    "name": "Beedrill",
+                    "rarity": "3diamond",
+                    "id": "A1010"
+                },
+                {
+                    "name": "Venonat",
+                    "rarity": "1diamond",
+                    "id": "A1016"
+                },
+                {
+                    "name": "Venomoth",
+                    "rarity": "2diamond",
+                    "id": "A1017"
+                },
+                {
+                    "name": "Scyther",
+                    "rarity": "1diamond",
+                    "id": "A1025"
+                },
+                {
+                    "name": "Pinsir",
+                    "rarity": "2diamond",
+                    "id": "A1026"
+                },
+                {
+                    "name": "Cottonee",
+                    "rarity": "1diamond",
+                    "id": "A1027"
+                },
+                {
+                    "name": "Whimsicott",
+                    "rarity": "2diamond",
+                    "id": "A1028"
+                },
+                {
+                    "name": "Petilil",
+                    "rarity": "1diamond",
+                    "id": "A1029"
+                },
+                {
+                    "name": "Lilligant",
+                    "rarity": "2diamond",
+                    "id": "A1030"
+                },
+                {
+                    "name": "Ponyta",
+                    "rarity": "1diamond",
+                    "id": "A1042"
+                },
+                {
+                    "name": "Rapidash",
+                    "rarity": "2diamond",
+                    "id": "A1043"
+                },
+                {
+                    "name": "Heatmor",
+                    "rarity": "1diamond",
+                    "id": "A1048"
+                },
+                {
+                    "name": "Salandit",
+                    "rarity": "1diamond",
+                    "id": "A1049"
+                },
+                {
+                    "name": "Salazzle",
+                    "rarity": "1diamond",
+                    "id": "A1050"
+                },
+                {
+                    "name": "Sizzlipede",
+                    "rarity": "1diamond",
+                    "id": "A1051"
+                },
+                {
+                    "name": "Centiskorch",
+                    "rarity": "3diamond",
+                    "id": "A1052"
+                },
+                {
+                    "name": "Psyduck",
+                    "rarity": "1diamond",
+                    "id": "A1057"
+                },
+                {
+                    "name": "Golduck",
+                    "rarity": "2diamond",
+                    "id": "A1058"
+                },
+                {
+                    "name": "Tentacool",
+                    "rarity": "1diamond",
+                    "id": "A1062"
+                },
+                {
+                    "name": "Tentacruel",
+                    "rarity": "2diamond",
+                    "id": "A1063"
+                },
+                {
+                    "name": "Shellder",
+                    "rarity": "1diamond",
+                    "id": "A1066"
+                },
+                {
+                    "name": "Cloyster",
+                    "rarity": "2diamond",
+                    "id": "A1067"
+                },
+                {
+                    "name": "Krabby",
+                    "rarity": "1diamond",
+                    "id": "A1068"
+                },
+                {
+                    "name": "Kingler",
+                    "rarity": "2diamond",
+                    "id": "A1069"
+                },
+                {
+                    "name": "Vaporeon",
+                    "rarity": "3diamond",
+                    "id": "A1080"
+                },
+                {
+                    "name": "Articuno",
+                    "rarity": "3diamond",
+                    "id": "A1083"
+                },
+                {
+                    "name": "Articuno ex",
+                    "rarity": "4diamond",
+                    "id": "A1084"
+                },
+                {
+                    "name": "Bruxish",
+                    "rarity": "2diamond",
+                    "id": "A1091"
+                },
+                {
+                    "name": "Snom",
+                    "rarity": "1diamond",
+                    "id": "A1092"
+                },
+                {
+                    "name": "Frosmoth",
+                    "rarity": "2diamond",
+                    "id": "A1093"
+                },
+                {
+                    "name": "Blitzle",
+                    "rarity": "1diamond",
+                    "id": "A1105"
+                },
+                {
+                    "name": "Zebstrika",
+                    "rarity": "2diamond",
+                    "id": "A1106"
+                },
+                {
+                    "name": "Tynamo",
+                    "rarity": "1diamond",
+                    "id": "A1107"
+                },
+                {
+                    "name": "Eelektrik",
+                    "rarity": "2diamond",
+                    "id": "A1108"
+                },
+                {
+                    "name": "Eelektross",
+                    "rarity": "3diamond",
+                    "id": "A1109"
+                },
+                {
+                    "name": "Helioptile",
+                    "rarity": "1diamond",
+                    "id": "A1110"
+                },
+                {
+                    "name": "Heliolisk",
+                    "rarity": "1diamond",
+                    "id": "A1111"
+                },
+                {
+                    "name": "Pincurchin",
+                    "rarity": "2diamond",
+                    "id": "A1112"
+                },
+                {
+                    "name": "Slowpoke",
+                    "rarity": "1diamond",
+                    "id": "A1118"
+                },
+                {
+                    "name": "Slowbro",
+                    "rarity": "2diamond",
+                    "id": "A1119"
+                },
+                {
+                    "name": "Gastly",
+                    "rarity": "1diamond",
+                    "id": "A1120"
+                },
+                {
+                    "name": "Haunter",
+                    "rarity": "2diamond",
+                    "id": "A1121"
+                },
+                {
+                    "name": "Gengar",
+                    "rarity": "3diamond",
+                    "id": "A1122"
+                },
+                {
+                    "name": "Gengar ex",
+                    "rarity": "4diamond",
+                    "id": "A1123"
+                },
+                {
+                    "name": "Mr. Mime",
+                    "rarity": "2diamond",
+                    "id": "A1126"
+                },
+                {
+                    "name": "Jynx",
+                    "rarity": "1diamond",
+                    "id": "A1127"
+                },
+                {
+                    "name": "Mewtwo",
+                    "rarity": "3diamond",
+                    "id": "A1128"
+                },
+                {
+                    "name": "Mewtwo ex",
+                    "rarity": "4diamond",
+                    "id": "A1129"
+                },
+                {
+                    "name": "Ralts",
+                    "rarity": "1diamond",
+                    "id": "A1130"
+                },
+                {
+                    "name": "Kirlia",
+                    "rarity": "2diamond",
+                    "id": "A1131"
+                },
+                {
+                    "name": "Gardevoir",
+                    "rarity": "3diamond",
+                    "id": "A1132"
+                },
+                {
+                    "name": "Woobat",
+                    "rarity": "1diamond",
+                    "id": "A1133"
+                },
+                {
+                    "name": "Swoobat",
+                    "rarity": "1diamond",
+                    "id": "A1134"
+                },
+                {
+                    "name": "Golett",
+                    "rarity": "1diamond",
+                    "id": "A1135"
+                },
+                {
+                    "name": "Golurk",
+                    "rarity": "2diamond",
+                    "id": "A1136"
+                },
+                {
+                    "name": "Sandshrew",
+                    "rarity": "1diamond",
+                    "id": "A1137"
+                },
+                {
+                    "name": "Sandslash",
+                    "rarity": "2diamond",
+                    "id": "A1138"
+                },
+                {
+                    "name": "Cubone",
+                    "rarity": "1diamond",
+                    "id": "A1151"
+                },
+                {
+                    "name": "Marowak",
+                    "rarity": "2diamond",
+                    "id": "A1152"
+                },
+                {
+                    "name": "Marowak ex",
+                    "rarity": "4diamond",
+                    "id": "A1153"
+                },
+                {
+                    "name": "Hitmonlee",
+                    "rarity": "1diamond",
+                    "id": "A1154"
+                },
+                {
+                    "name": "Rhyhorn",
+                    "rarity": "1diamond",
+                    "id": "A1156"
+                },
+                {
+                    "name": "Rhydon",
+                    "rarity": "2diamond",
+                    "id": "A1157"
+                },
+                {
+                    "name": "Clobbopus",
+                    "rarity": "1diamond",
+                    "id": "A1162"
+                },
+                {
+                    "name": "Grapploct",
+                    "rarity": "2diamond",
+                    "id": "A1163"
+                },
+                {
+                    "name": "Ekans",
+                    "rarity": "1diamond",
+                    "id": "A1164"
+                },
+                {
+                    "name": "Arbok",
+                    "rarity": "2diamond",
+                    "id": "A1165"
+                },
+                {
+                    "name": "Zubat",
+                    "rarity": "1diamond",
+                    "id": "A1172"
+                },
+                {
+                    "name": "Golbat",
+                    "rarity": "2diamond",
+                    "id": "A1173"
+                },
+                {
+                    "name": "Grimer",
+                    "rarity": "1diamond",
+                    "id": "A1174"
+                },
+                {
+                    "name": "Muk",
+                    "rarity": "3diamond",
+                    "id": "A1175"
+                },
+                {
+                    "name": "Koffing",
+                    "rarity": "1diamond",
+                    "id": "A1176"
+                },
+                {
+                    "name": "Weezing",
+                    "rarity": "3diamond",
+                    "id": "A1177"
+                },
+                {
+                    "name": "Pawniard",
+                    "rarity": "1diamond",
+                    "id": "A1179"
+                },
+                {
+                    "name": "Bisharp",
+                    "rarity": "2diamond",
+                    "id": "A1180"
+                },
+                {
+                    "name": "Dratini",
+                    "rarity": "1diamond",
+                    "id": "A1183"
+                },
+                {
+                    "name": "Dragonair",
+                    "rarity": "2diamond",
+                    "id": "A1184"
+                },
+                {
+                    "name": "Dragonite",
+                    "rarity": "3diamond",
+                    "id": "A1185"
+                },
+                {
+                    "name": "Pidgey",
+                    "rarity": "1diamond",
+                    "id": "A1186"
+                },
+                {
+                    "name": "Pidgeotto",
+                    "rarity": "1diamond",
+                    "id": "A1187"
+                },
+                {
+                    "name": "Pidgeot",
+                    "rarity": "3diamond",
+                    "id": "A1188"
+                },
+                {
+                    "name": "Rattata",
+                    "rarity": "1diamond",
+                    "id": "A1189"
+                },
+                {
+                    "name": "Raticate",
+                    "rarity": "1diamond",
+                    "id": "A1190"
+                },
+                {
+                    "name": "Farfetch'd",
+                    "rarity": "1diamond",
+                    "id": "A1198"
+                },
+                {
+                    "name": "Doduo",
+                    "rarity": "1diamond",
+                    "id": "A1199"
+                },
+                {
+                    "name": "Dodrio",
+                    "rarity": "2diamond",
+                    "id": "A1200"
+                },
+                {
+                    "name": "Lickitung",
+                    "rarity": "2diamond",
+                    "id": "A1201"
+                },
+                {
+                    "name": "Ditto",
+                    "rarity": "3diamond",
+                    "id": "A1205"
+                },
+                {
+                    "name": "Eevee",
+                    "rarity": "1diamond",
+                    "id": "A1207"
+                },
+                {
+                    "name": "Porygon",
+                    "rarity": "2diamond",
+                    "id": "A1209"
+                },
+                {
+                    "name": "Aerodactyl",
+                    "rarity": "3diamond",
+                    "id": "A1210"
+                },
+                {
+                    "name": "Minccino",
+                    "rarity": "1diamond",
+                    "id": "A1212"
+                },
+                {
+                    "name": "Cinccino",
+                    "rarity": "2diamond",
+                    "id": "A1213"
+                },
+                {
+                    "name": "Wooloo",
+                    "rarity": "1diamond",
+                    "id": "A1214"
+                },
+                {
+                    "name": "Dubwool",
+                    "rarity": "1diamond",
+                    "id": "A1215"
+                },
+                {
+                    "name": "Old Amber",
+                    "rarity": "1diamond",
+                    "id": "A1218"
+                },
+                {
+                    "name": "Koga",
+                    "rarity": "2diamond",
+                    "id": "A1222"
+                },
+                {
+                    "name": "Giovanni",
+                    "rarity": "2diamond",
+                    "id": "A1223"
+                },
+                {
+                    "name": "Bulbasaur",
+                    "rarity": "1star",
+                    "id": "A1227"
+                },
+                {
+                    "name": "Cubone",
+                    "rarity": "1star",
+                    "id": "A1239"
+                },
+                {
+                    "name": "Golbat",
+                    "rarity": "1star",
+                    "id": "A1242"
+                },
+                {
+                    "name": "Weezing",
+                    "rarity": "1star",
+                    "id": "A1243"
+                },
+                {
+                    "name": "Dragonite",
+                    "rarity": "1star",
+                    "id": "A1244"
+                },
+                {
+                    "name": "Pidgeot",
+                    "rarity": "1star",
+                    "id": "A1245"
+                },
+                {
+                    "name": "Ditto",
+                    "rarity": "1star",
+                    "id": "A1247"
+                },
+                {
+                    "name": "Porygon",
+                    "rarity": "1star",
+                    "id": "A1249"
+                },
+                {
+                    "name": "Venusaur ex",
+                    "rarity": "2star",
+                    "id": "A1251"
+                },
+                {
+                    "name": "Articuno ex",
+                    "rarity": "2star",
+                    "id": "A1258"
+                },
+                {
+                    "name": "Gengar ex",
+                    "rarity": "2star",
+                    "id": "A1261"
+                },
+                {
+                    "name": "Mewtwo ex",
+                    "rarity": "2star",
+                    "id": "A1262"
+                },
+                {
+                    "name": "Marowak ex",
+                    "rarity": "2star",
+                    "id": "A1264"
+                },
+                {
+                    "name": "Koga",
+                    "rarity": "2star",
+                    "id": "A1269"
+                },
+                {
+                    "name": "Giovanni",
+                    "rarity": "2star",
+                    "id": "A1270"
+                },
+                {
+                    "name": "Articuno ex",
+                    "rarity": "2star",
+                    "id": "A1275"
+                },
+                {
+                    "name": "Gengar ex",
+                    "rarity": "2star",
+                    "id": "A1277"
+                },
+                {
+                    "name": "Mewtwo ex",
+                    "rarity": "3star",
+                    "id": "A1282"
+                },
+                {
+                    "name": "Charizard ex",
+                    "rarity": "crown",
+                    "id": "A1284"
+                },
+                {
+                    "name": "Pikachu ex",
+                    "rarity": "crown",
+                    "id": "A1285"
+                },
+                {
+                    "name": "Mewtwo ex ",
+                    "rarity": "crown",
+                    "id": "A1286"
+                }
+            ]
+        },
+        {
+            "name": "Charizard",
+            "rare_pack_rate": 0.00050,
+            "card_rates": {
+                "card1": {
+                    "1diamond": 0.02000,
+                    "2diamond": 0.0,
+                    "3diamond": 0.0,
+                    "4diamond": 0.0,
+                    "1star": 0.0,
+                    "2star": 0.0,
+                    "3star": 0.0,
+                    "crown": 0.0
+                },
+                "card2": {
+                    "1diamond": 0.02000,
+                    "2diamond": 0.0,
+                    "3diamond": 0.0,
+                    "4diamond": 0.0,
+                    "1star": 0.0,
+                    "2star": 0.0,
+                    "3star": 0.0,
+                    "crown": 0.0
+                },
+                "card3": {
+                    "1diamond": 0.02000,
+                    "2diamond": 0.0,
+                    "3diamond": 0.0,
+                    "4diamond": 0.0,
+                    "1star": 0.0,
+                    "2star": 0.0,
+                    "3star": 0.0,
+                    "crown": 0.0
+                },
+                "card4":
+                {
+                    "1diamond": 0.0,
+                    "2diamond": 0.02571,
+                    "3diamond": 0.00357,
+                    "4diamond": 0.00333,
+                    "1star": 0.00321,
+                    "2star": 0.00050,
+                    "3star": 0.00222,
+                    "crown": 0.00013
+                },
+                "card5": {
+                    "1diamond": 0.0,
+                    "2diamond": 0.01714,
+                    "3diamond": 0.01428,
+                    "4diamond": 0.01332,
+                    "1star": 0.01268,
+                    "2star": 0.00200,
+                    "3star": 0.00888,
+                    "crown": 0.00053
+                },
+                "rare": {
+                    "1diamond": 0.0,
+                    "2diamond": 0.0,
+                    "3diamond": 0.0,
+                    "4diamond": 0.0,
+                    "1star": 0.05000,
+                    "2star": 0.05000,
+                    "3star": 0.05000,
+                    "crown": 0.05000
+                }
+            },
+            "cards": [
+                {
+                    "name": "Oddish",
+                    "rarity": "1diamond",
+                    "id": "A1011"
+                },
+                {
+                    "name": "Gloom",
+                    "rarity": "2diamond",
+                    "id": "A1012"
+                },
+                {
+                    "name": "Vileplume",
+                    "rarity": "3diamond",
+                    "id": "A1013"
+                },
+                {
+                    "name": "Bellsprout",
+                    "rarity": "1diamond",
+                    "id": "A1018"
+                },
+                {
+                    "name": "Weepinbell",
+                    "rarity": "2diamond",
+                    "id": "A1019"
+                },
+                {
+                    "name": "Victreebel",
+                    "rarity": "3diamond",
+                    "id": "A1020"
+                },
+                {
+                    "name": "Exeggcute",
+                    "rarity": "1diamond",
+                    "id": "A1021"
+                },
+                {
+                    "name": "Exeggutor",
+                    "rarity": "3diamond",
+                    "id": "A1022"
+                },
+                {
+                    "name": "Exeggutor ex",
+                    "rarity": "4diamond",
+                    "id": "A1023"
+                },
+                {
+                    "name": "Tangela",
+                    "rarity": "1diamond",
+                    "id": "A1024"
+                },
+                {
+                    "name": "Pinsir",
+                    "rarity": "2diamond",
+                    "id": "A1026"
+                },
+                {
+                    "name": "Cottonee",
+                    "rarity": "1diamond",
+                    "id": "A1027"
+                },
+                {
+                    "name": "Whimsicott",
+                    "rarity": "2diamond",
+                    "id": "A1028"
+                },
+                {
+                    "name": "Petilil",
+                    "rarity": "1diamond",
+                    "id": "A1029"
+                },
+                {
+                    "name": "Lilligant",
+                    "rarity": "2diamond",
+                    "id": "A1030"
+                },
+                {
+                    "name": "Skiddo",
+                    "rarity": "1diamond",
+                    "id": "A1031"
+                },
+                {
+                    "name": "Gogoat",
+                    "rarity": "1diamond",
+                    "id": "A1032"
+                },
+                {
+                    "name": "Charmander",
+                    "rarity": "1diamond",
+                    "id": "A1033"
+                },
+                {
+                    "name": "Charmeleon",
+                    "rarity": "2diamond",
+                    "id": "A1034"
+                },
+                {
+                    "name": "Charizard",
+                    "rarity": "3diamond",
+                    "id": "A1035"
+                },
+                {
+                    "name": "Charizard ex",
+                    "rarity": "4diamond",
+                    "id": "A1036"
+                },
+                {
+                    "name": "Vulpix",
+                    "rarity": "1diamond",
+                    "id": "A1037"
+                },
+                {
+                    "name": "Ninetales",
+                    "rarity": "2diamond",
+                    "id": "A1038"
+                },
+                {
+                    "name": "Ponyta",
+                    "rarity": "1diamond",
+                    "id": "A1042"
+                },
+                {
+                    "name": "Rapidash",
+                    "rarity": "2diamond",
+                    "id": "A1043"
+                },
+                {
+                    "name": "Magmar",
+                    "rarity": "1diamond",
+                    "id": "A1044"
+                },
+                {
+                    "name": "Flareon",
+                    "rarity": "3diamond",
+                    "id": "A1045"
+                },
+                {
+                    "name": "Moltres",
+                    "rarity": "3diamond",
+                    "id": "A1046"
+                },
+                {
+                    "name": "Moltres ex",
+                    "rarity": "4diamond",
+                    "id": "A1047"
+                },
+                {
+                    "name": "Heatmor",
+                    "rarity": "1diamond",
+                    "id": "A1048"
+                },
+                {
+                    "name": "Sizzlipede",
+                    "rarity": "1diamond",
+                    "id": "A1051"
+                },
+                {
+                    "name": "Centiskorch",
+                    "rarity": "3diamond",
+                    "id": "A1052"
+                },
+                {
+                    "name": "Psyduck",
+                    "rarity": "1diamond",
+                    "id": "A1057"
+                },
+                {
+                    "name": "Golduck",
+                    "rarity": "2diamond",
+                    "id": "A1058"
+                },
+                {
+                    "name": "Poliwag",
+                    "rarity": "1diamond",
+                    "id": "A1059"
+                },
+                {
+                    "name": "Poliwhirl",
+                    "rarity": "2diamond",
+                    "id": "A1060"
+                },
+                {
+                    "name": "Poliwrath",
+                    "rarity": "3diamond",
+                    "id": "A1061"
+                },
+                {
+                    "name": "Staryu",
+                    "rarity": "1diamond",
+                    "id": "A1074"
+                },
+                {
+                    "name": "Starmie",
+                    "rarity": "1diamond",
+                    "id": "A1075"
+                },
+                {
+                    "name": "Starmie ex",
+                    "rarity": "4diamond",
+                    "id": "A1076"
+                },
+                {
+                    "name": "Lapras",
+                    "rarity": "3diamond",
+                    "id": "A1079"
+                },
+                {
+                    "name": "Ducklett",
+                    "rarity": "1diamond",
+                    "id": "A1085"
+                },
+                {
+                    "name": "Swanna",
+                    "rarity": "2diamond",
+                    "id": "A1086"
+                },
+                {
+                    "name": "Froakie",
+                    "rarity": "1diamond",
+                    "id": "A1087"
+                },
+                {
+                    "name": "Frogadier",
+                    "rarity": "2diamond",
+                    "id": "A1088"
+                },
+                {
+                    "name": "Greninja",
+                    "rarity": "3diamond",
+                    "id": "A1089"
+                },
+                {
+                    "name": "Pyukumuku",
+                    "rarity": "1diamond",
+                    "id": "A1090"
+                },
+                {
+                    "name": "Bruxish",
+                    "rarity": "2diamond",
+                    "id": "A1091"
+                },
+                {
+                    "name": "Snom",
+                    "rarity": "1diamond",
+                    "id": "A1092"
+                },
+                {
+                    "name": "Frosmoth",
+                    "rarity": "2diamond",
+                    "id": "A1093"
+                },
+                {
+                    "name": "Blitzle",
+                    "rarity": "1diamond",
+                    "id": "A1105"
+                },
+                {
+                    "name": "Zebstrika",
+                    "rarity": "2diamond",
+                    "id": "A1106"
+                },
+                {
+                    "name": "Helioptile",
+                    "rarity": "1diamond",
+                    "id": "A1110"
+                },
+                {
+                    "name": "Heliolisk",
+                    "rarity": "1diamond",
+                    "id": "A1111"
+                },
+                {
+                    "name": "Pincurchin",
+                    "rarity": "2diamond",
+                    "id": "A1112"
+                },
+                {
+                    "name": "Abra",
+                    "rarity": "1diamond",
+                    "id": "A1115"
+                },
+                {
+                    "name": "Kadabra",
+                    "rarity": "2diamond",
+                    "id": "A1116"
+                },
+                {
+                    "name": "Alakazam",
+                    "rarity": "3diamond",
+                    "id": "A1117"
+                },
+                {
+                    "name": "Slowpoke",
+                    "rarity": "1diamond",
+                    "id": "A1118"
+                },
+                {
+                    "name": "Slowbro",
+                    "rarity": "2diamond",
+                    "id": "A1119"
+                },
+                {
+                    "name": "Woobat",
+                    "rarity": "1diamond",
+                    "id": "A1133"
+                },
+                {
+                    "name": "Swoobat",
+                    "rarity": "1diamond",
+                    "id": "A1134"
+                },
+                {
+                    "name": "Golett",
+                    "rarity": "1diamond",
+                    "id": "A1135"
+                },
+                {
+                    "name": "Golurk",
+                    "rarity": "2diamond",
+                    "id": "A1136"
+                },
+                {
+                    "name": "Sandshrew",
+                    "rarity": "1diamond",
+                    "id": "A1137"
+                },
+                {
+                    "name": "Sandslash",
+                    "rarity": "2diamond",
+                    "id": "A1138"
+                },
+                {
+                    "name": "Mankey",
+                    "rarity": "1diamond",
+                    "id": "A1141"
+                },
+                {
+                    "name": "Primeape",
+                    "rarity": "2diamond",
+                    "id": "A1142"
+                },
+                {
+                    "name": "Machop",
+                    "rarity": "1diamond",
+                    "id": "A1143"
+                },
+                {
+                    "name": "Machoke",
+                    "rarity": "2diamond",
+                    "id": "A1144"
+                },
+                {
+                    "name": "Machamp",
+                    "rarity": "3diamond",
+                    "id": "A1145"
+                },
+                {
+                    "name": "Machamp ex",
+                    "rarity": "4diamond",
+                    "id": "A1146"
+                },
+                {
+                    "name": "Hitmonchan",
+                    "rarity": "1diamond",
+                    "id": "A1155"
+                },
+                {
+                    "name": "Kabuto",
+                    "rarity": "2diamond",
+                    "id": "A1158"
+                },
+                {
+                    "name": "Kabutops",
+                    "rarity": "3diamond",
+                    "id": "A1159"
+                },
+                {
+                    "name": "Clobbopus",
+                    "rarity": "1diamond",
+                    "id": "A1162"
+                },
+                {
+                    "name": "Grapploct",
+                    "rarity": "2diamond",
+                    "id": "A1163"
+                },
+                {
+                    "name": "Ekans",
+                    "rarity": "1diamond",
+                    "id": "A1164"
+                },
+                {
+                    "name": "Arbok",
+                    "rarity": "2diamond",
+                    "id": "A1165"
+                },
+                {
+                    "name": "Mawile",
+                    "rarity": "1diamond",
+                    "id": "A1178"
+                },
+                {
+                    "name": "Pawniard",
+                    "rarity": "1diamond",
+                    "id": "A1179"
+                },
+                {
+                    "name": "Bisharp",
+                    "rarity": "2diamond",
+                    "id": "A1180"
+                },
+                {
+                    "name": "Meltan",
+                    "rarity": "1diamond",
+                    "id": "A1181"
+                },
+                {
+                    "name": "Melmetal",
+                    "rarity": "3diamond",
+                    "id": "A1182"
+                },
+                {
+                    "name": "Rattata",
+                    "rarity": "1diamond",
+                    "id": "A1189"
+                },
+                {
+                    "name": "Raticate",
+                    "rarity": "1diamond",
+                    "id": "A1190"
+                },
+                {
+                    "name": "Spearow",
+                    "rarity": "1diamond",
+                    "id": "A1191"
+                },
+                {
+                    "name": "Fearow",
+                    "rarity": "1diamond",
+                    "id": "A1192"
+                },
+                {
+                    "name": "Meowth",
+                    "rarity": "1diamond",
+                    "id": "A1196"
+                },
+                {
+                    "name": "Persian",
+                    "rarity": "2diamond",
+                    "id": "A1197"
+                },
+                {
+                    "name": "Farfetch'd",
+                    "rarity": "1diamond",
+                    "id": "A1198"
+                },
+                {
+                    "name": "Doduo",
+                    "rarity": "1diamond",
+                    "id": "A1199"
+                },
+                {
+                    "name": "Dodrio",
+                    "rarity": "2diamond",
+                    "id": "A1200"
+                },
+                {
+                    "name": "Kangaskhan",
+                    "rarity": "3diamond",
+                    "id": "A1203"
+                },
+                {
+                    "name": "Tauros",
+                    "rarity": "2diamond",
+                    "id": "A1204"
+                },
+                {
+                    "name": "Eevee",
+                    "rarity": "1diamond",
+                    "id": "A1206"
+                },
+                {
+                    "name": "Minccino",
+                    "rarity": "1diamond",
+                    "id": "A1212"
+                },
+                {
+                    "name": "Cinccino",
+                    "rarity": "2diamond",
+                    "id": "A1213"
+                },
+                {
+                    "name": "Wooloo",
+                    "rarity": "1diamond",
+                    "id": "A1214"
+                },
+                {
+                    "name": "Dubwool",
+                    "rarity": "1diamond",
+                    "id": "A1215"
+                },
+                {
+                    "name": "Dome Fossil",
+                    "rarity": "1diamond",
+                    "id": "A1217"
+                },
+                {
+                    "name": "Erika",
+                    "rarity": "2diamond",
+                    "id": "A1219"
+                },
+                {
+                    "name": "Blaine",
+                    "rarity": "2diamond",
+                    "id": "A1221"
+                },
+                {
+                    "name": "Sabrina",
+                    "rarity": "2diamond",
+                    "id": "A1225"
+                },
+                {
+                    "name": "Gloom",
+                    "rarity": "1star",
+                    "id": "A1228"
+                },
+                {
+                    "name": "Pinsir",
+                    "rarity": "1star",
+                    "id": "A1229"
+                },
+                {
+                    "name": "Charmander",
+                    "rarity": "1star",
+                    "id": "A1230"
+                },
+                {
+                    "name": "Rapidash",
+                    "rarity": "1star",
+                    "id": "A1231"
+                },
+                {
+                    "name": "Lapras",
+                    "rarity": "1star",
+                    "id": "A1234"
+                },
+                {
+                    "name": "Alakazam",
+                    "rarity": "1star",
+                    "id": "A1236"
+                },
+                {
+                    "name": "Slowpoke",
+                    "rarity": "1star",
+                    "id": "A1237"
+                },
+                {
+                    "name": "Meowth",
+                    "rarity": "1star",
+                    "id": "A1246"
+                },
+                {
+                    "name": "Exeggutor ex",
+                    "rarity": "2star",
+                    "id": "A1252"
+                },
+                {
+                    "name": "Charizard ex",
+                    "rarity": "2star",
+                    "id": "A1253"
+                },
+                {
+                    "name": "Moltres ex",
+                    "rarity": "2star",
+                    "id": "A1255"
+                },
+                {
+                    "name": "Starmie ex",
+                    "rarity": "2star",
+                    "id": "A1257"
+                },
+                {
+                    "name": "Machamp ex",
+                    "rarity": "2star",
+                    "id": "A1263"
+                },
+                {
+                    "name": "Erika",
+                    "rarity": "2star",
+                    "id": "A1266"
+                },
+                {
+                    "name": "Blaine",
+                    "rarity": "2star",
+                    "id": "A1268"
+                },
+                {
+                    "name": "Sabrina",
+                    "rarity": "2star",
+                    "id": "A1272"
+                },
+                {
+                    "name": "Moltres ex",
+                    "rarity": "2star",
+                    "id": "A1274"
+                },
+                {
+                    "name": "Machamp ex",
+                    "rarity": "2star",
+                    "id": "A1278"
+                },
+                {
+                    "name": "Charizard ex",
+                    "rarity": "3star",
+                    "id": "A1280"
+                },
+                {
+                    "name": "Charizard ex",
+                    "rarity": "crown",
+                    "id": "A1284"
+                },
+                {
+                    "name": "Pikachu ex",
+                    "rarity": "crown",
+                    "id": "A1285"
+                },
+                {
+                    "name": "Mewtwo ex",
+                    "rarity": "crown",
+                    "id": "A1286"
+                }
+            ]
+        },
+        {
+            "name": "Pikachu",
+            "rare_pack_rate": 0.00050,
+            "card_rates": {
+                "card1": {
+                    "1diamond": 0.02000,
+                    "2diamond": 0.0,
+                    "3diamond": 0.0,
+                    "4diamond": 0.0,
+                    "1star": 0.0,
+                    "2star": 0.0,
+                    "3star": 0.0,
+                    "crown": 0.0
+                },
+                "card2": {
+                    "1diamond": 0.02000,
+                    "2diamond": 0.0,
+                    "3diamond": 0.0,
+                    "4diamond": 0.0,
+                    "1star": 0.0,
+                    "2star": 0.0,
+                    "3star": 0.0,
+                    "crown": 0.0
+                },
+                "card3": {
+                    "1diamond": 0.02000,
+                    "2diamond": 0.0,
+                    "3diamond": 0.0,
+                    "4diamond": 0.0,
+                    "1star": 0.0,
+                    "2star": 0.0,
+                    "3star": 0.0,
+                    "crown": 0.0
+                },
+                "card4":
+                {
+                    "1diamond": 0.0,
+                    "2diamond": 0.02571,
+                    "3diamond": 0.00357,
+                    "4diamond": 0.00333,
+                    "1star": 0.00321,
+                    "2star": 0.00050,
+                    "3star": 0.00222,
+                    "crown": 0.00013
+                },
+                "card5": {
+                    "1diamond": 0.0,
+                    "2diamond": 0.01714,
+                    "3diamond": 0.01428,
+                    "4diamond": 0.01332,
+                    "1star": 0.01268,
+                    "2star": 0.00200,
+                    "3star": 0.00888,
+                    "crown": 0.00053
+                },
+                "rare": {
+                    "1diamond": 0.0,
+                    "2diamond": 0.0,
+                    "3diamond": 0.0,
+                    "4diamond": 0.0,
+                    "1star": 0.05000,
+                    "2star": 0.05000,
+                    "3star": 0.05000,
+                    "crown": 0.05000
+                }
+            },
+            "cards": [
+                {
+                    "name": "Caterpie",
+                    "rarity": "1diamond",
+                    "id": "A1005"
+                },
+                {
+                    "name": "Metapod",
+                    "rarity": "1diamond",
+                    "id": "A1006"
+                },
+                {
+                    "name": "Butterfree",
+                    "rarity": "3diamond",
+                    "id": "A1007"
+                },
+                {
+                    "name": "Paras",
+                    "rarity": "1diamond",
+                    "id": "A1014"
+                },
+                {
+                    "name": "Parasect",
+                    "rarity": "2diamond",
+                    "id": "A1015"
+                },
+                {
+                    "name": "Pinsir",
+                    "rarity": "2diamond",
+                    "id": "A1026"
+                },
+                {
+                    "name": "Cottonee",
+                    "rarity": "1diamond",
+                    "id": "A1027"
+                },
+                {
+                    "name": "Whimsicott",
+                    "rarity": "2diamond",
+                    "id": "A1028"
+                },
+                {
+                    "name": "Petilil",
+                    "rarity": "1diamond",
+                    "id": "A1029"
+                },
+                {
+                    "name": "Lilligant",
+                    "rarity": "2diamond",
+                    "id": "A1030"
+                },
+                {
+                    "name": "Growlithe",
+                    "rarity": "1diamond",
+                    "id": "A1039"
+                },
+                {
+                    "name": "Arcanine",
+                    "rarity": "3diamond",
+                    "id": "A1040"
+                },
+                {
+                    "name": "Arcanine ex",
+                    "rarity": "4diamond",
+                    "id": "A1041"
+                },
+                {
+                    "name": "Ponyta",
+                    "rarity": "1diamond",
+                    "id": "A1042"
+                },
+                {
+                    "name": "Rapidash",
+                    "rarity": "2diamond",
+                    "id": "A1043"
+                },
+                {
+                    "name": "Heatmor",
+                    "rarity": "1diamond",
+                    "id": "A1048"
+                },
+                {
+                    "name": "Sizzlipede",
+                    "rarity": "1diamond",
+                    "id": "A1051"
+                },
+                {
+                    "name": "Centiskorch",
+                    "rarity": "3diamond",
+                    "id": "A1052"
+                },
+                {
+                    "name": "Squirtle",
+                    "rarity": "1diamond",
+                    "id": "A1053"
+                },
+                {
+                    "name": "Wartortle",
+                    "rarity": "2diamond",
+                    "id": "A1054"
+                },
+                {
+                    "name": "Blastoise",
+                    "rarity": "3diamond",
+                    "id": "A1055"
+                },
+                {
+                    "name": "Blastoise ex",
+                    "rarity": "4diamond",
+                    "id": "A1056"
+                },
+                {
+                    "name": "Psyduck",
+                    "rarity": "1diamond",
+                    "id": "A1057"
+                },
+                {
+                    "name": "Golduck",
+                    "rarity": "2diamond",
+                    "id": "A1058"
+                },
+                {
+                    "name": "Seel",
+                    "rarity": "1diamond",
+                    "id": "A1064"
+                },
+                {
+                    "name": "Dewgong",
+                    "rarity": "2diamond",
+                    "id": "A1065"
+                },
+                {
+                    "name": "Horsea",
+                    "rarity": "1diamond",
+                    "id": "A1070"
+                },
+                {
+                    "name": "Seadra",
+                    "rarity": "2diamond",
+                    "id": "A1071"
+                },
+                {
+                    "name": "Goldeen",
+                    "rarity": "1diamond",
+                    "id": "A1072"
+                },
+                {
+                    "name": "Seaking",
+                    "rarity": "2diamond",
+                    "id": "A1073"
+                },
+                {
+                    "name": "Magikarp",
+                    "rarity": "1diamond",
+                    "id": "A1077"
+                },
+                {
+                    "name": "Gyarados",
+                    "rarity": "3diamond",
+                    "id": "A1078"
+                },
+                {
+                    "name": "Omanyte",
+                    "rarity": "2diamond",
+                    "id": "A1081"
+                },
+                {
+                    "name": "Omastar",
+                    "rarity": "3diamond",
+                    "id": "A1082"
+                },
+                {
+                    "name": "Bruxish",
+                    "rarity": "2diamond",
+                    "id": "A1091"
+                },
+                {
+                    "name": "Snom",
+                    "rarity": "1diamond",
+                    "id": "A1092"
+                },
+                {
+                    "name": "Frosmoth",
+                    "rarity": "2diamond",
+                    "id": "A1093"
+                },
+                {
+                    "name": "Pikachu",
+                    "rarity": "1diamond",
+                    "id": "A1094"
+                },
+                {
+                    "name": "Raichu",
+                    "rarity": "3diamond",
+                    "id": "A1095"
+                },
+                {
+                    "name": "Pikachu ex",
+                    "rarity": "4diamond",
+                    "id": "A1096"
+                },
+                {
+                    "name": "Magnemite",
+                    "rarity": "1diamond",
+                    "id": "A1097"
+                },
+                {
+                    "name": "Magneton",
+                    "rarity": "3diamond",
+                    "id": "A1098"
+                },
+                {
+                    "name": "Voltorb",
+                    "rarity": "1diamond",
+                    "id": "A1099"
+                },
+                {
+                    "name": "Electrode",
+                    "rarity": "2diamond",
+                    "id": "A1100"
+                },
+                {
+                    "name": "Electabuzz",
+                    "rarity": "1diamond",
+                    "id": "A1101"
+                },
+                {
+                    "name": "Jolteon",
+                    "rarity": "3diamond",
+                    "id": "A1102"
+                },
+                {
+                    "name": "Zapdos",
+                    "rarity": "3diamond",
+                    "id": "A1103"
+                },
+                {
+                    "name": "Zapdos ex",
+                    "rarity": "4diamond",
+                    "id": "A1104"
+                },
+                {
+                    "name": "Blitzle",
+                    "rarity": "1diamond",
+                    "id": "A1105"
+                },
+                {
+                    "name": "Zebstrika",
+                    "rarity": "2diamond",
+                    "id": "A1106"
+                },
+                {
+                    "name": "Helioptile",
+                    "rarity": "1diamond",
+                    "id": "A1110"
+                },
+                {
+                    "name": "Heliolisk",
+                    "rarity": "1diamond",
+                    "id": "A1111"
+                },
+                {
+                    "name": "Pincurchin",
+                    "rarity": "2diamond",
+                    "id": "A1112"
+                },
+                {
+                    "name": "Clefairy",
+                    "rarity": "1diamond",
+                    "id": "A1113"
+                },
+                {
+                    "name": "Clefable",
+                    "rarity": "2diamond",
+                    "id": "A1114"
+                },
+                {
+                    "name": "Slowpoke",
+                    "rarity": "1diamond",
+                    "id": "A1118"
+                },
+                {
+                    "name": "Slowbro",
+                    "rarity": "2diamond",
+                    "id": "A1119"
+                },
+                {
+                    "name": "Drowzee",
+                    "rarity": "1diamond",
+                    "id": "A1124"
+                },
+                {
+                    "name": "Hypno",
+                    "rarity": "3diamond",
+                    "id": "A1125"
+                },
+                {
+                    "name": "Woobat",
+                    "rarity": "1diamond",
+                    "id": "A1133"
+                },
+                {
+                    "name": "Swoobat",
+                    "rarity": "1diamond",
+                    "id": "A1134"
+                },
+                {
+                    "name": "Golett",
+                    "rarity": "1diamond",
+                    "id": "A1135"
+                },
+                {
+                    "name": "Golurk",
+                    "rarity": "2diamond",
+                    "id": "A1136"
+                },
+                {
+                    "name": "Sandshrew",
+                    "rarity": "1diamond",
+                    "id": "A1137"
+                },
+                {
+                    "name": "Sandslash",
+                    "rarity": "2diamond",
+                    "id": "A1138"
+                },
+                {
+                    "name": "Diglett",
+                    "rarity": "1diamond",
+                    "id": "A1139"
+                },
+                {
+                    "name": "Dugtrio",
+                    "rarity": "2diamond",
+                    "id": "A1140"
+                },
+                {
+                    "name": "Geodude",
+                    "rarity": "1diamond",
+                    "id": "A1147"
+                },
+                {
+                    "name": "Graveler",
+                    "rarity": "2diamond",
+                    "id": "A1148"
+                },
+                {
+                    "name": "Golem",
+                    "rarity": "3diamond",
+                    "id": "A1149"
+                },
+                {
+                    "name": "Onix",
+                    "rarity": "2diamond",
+                    "id": "A1150"
+                },
+                {
+                    "name": "Mienfoo",
+                    "rarity": "1diamond",
+                    "id": "A1160"
+                },
+                {
+                    "name": "Mienshao",
+                    "rarity": "2diamond",
+                    "id": "A1161"
+                },
+                {
+                    "name": "Clobbopus",
+                    "rarity": "1diamond",
+                    "id": "A1162"
+                },
+                {
+                    "name": "Grapploct",
+                    "rarity": "2diamond",
+                    "id": "A1163"
+                },
+                {
+                    "name": "Ekans",
+                    "rarity": "1diamond",
+                    "id": "A1164"
+                },
+                {
+                    "name": "Arbok",
+                    "rarity": "2diamond",
+                    "id": "A1165"
+                },
+                {
+                    "name": "Nidoran♀",
+                    "rarity": "1diamond",
+                    "id": "A1166"
+                },
+                {
+                    "name": "Nidorina",
+                    "rarity": "2diamond",
+                    "id": "A1167"
+                },
+                {
+                    "name": "Nidoqueen",
+                    "rarity": "3diamond",
+                    "id": "A1168"
+                },
+                {
+                    "name": "Nidoran♂",
+                    "rarity": "1diamond",
+                    "id": "A1169"
+                },
+                {
+                    "name": "Nidorino",
+                    "rarity": "2diamond",
+                    "id": "A1170"
+                },
+                {
+                    "name": "Nidoking",
+                    "rarity": "3diamond",
+                    "id": "A1171"
+                },
+                {
+                    "name": "Pawniard",
+                    "rarity": "1diamond",
+                    "id": "A1179"
+                },
+                {
+                    "name": "Bisharp",
+                    "rarity": "2diamond",
+                    "id": "A1180"
+                },
+                {
+                    "name": "Rattata",
+                    "rarity": "1diamond",
+                    "id": "A1189"
+                },
+                {
+                    "name": "Raticate",
+                    "rarity": "1diamond",
+                    "id": "A1190"
+                },
+                {
+                    "name": "Jigglypuff",
+                    "rarity": "1diamond",
+                    "id": "A1193"
+                },
+                {
+                    "name": "Wigglytuff",
+                    "rarity": "1diamond",
+                    "id": "A1194"
+                },
+                {
+                    "name": "Wigglytuff ex",
+                    "rarity": "4diamond",
+                    "id": "A1195"
+                },
+                {
+                    "name": "Farfetch'd",
+                    "rarity": "1diamond",
+                    "id": "A1198"
+                },
+                {
+                    "name": "Doduo",
+                    "rarity": "1diamond",
+                    "id": "A1199"
+                },
+                {
+                    "name": "Dodrio",
+                    "rarity": "2diamond",
+                    "id": "A1200"
+                },
+                {
+                    "name": "Chansey",
+                    "rarity": "2diamond",
+                    "id": "A1202"
+                },
+                {
+                    "name": "Eevee",
+                    "rarity": "1diamond",
+                    "id": "A1208"
+                },
+                {
+                    "name": "Snorlax",
+                    "rarity": "3diamond",
+                    "id": "A1211"
+                },
+                {
+                    "name": "Minccino",
+                    "rarity": "1diamond",
+                    "id": "A1212"
+                },
+                {
+                    "name": "Cinccino",
+                    "rarity": "2diamond",
+                    "id": "A1213"
+                },
+                {
+                    "name": "Wooloo",
+                    "rarity": "1diamond",
+                    "id": "A1214"
+                },
+                {
+                    "name": "Dubwool",
+                    "rarity": "1diamond",
+                    "id": "A1215"
+                },
+                {
+                    "name": "Helix Fossil",
+                    "rarity": "1diamond",
+                    "id": "A1216"
+                },
+                {
+                    "name": "Misty",
+                    "rarity": "2diamond",
+                    "id": "A1220"
+                },
+                {
+                    "name": "Brock",
+                    "rarity": "2diamond",
+                    "id": "A1224"
+                },
+                {
+                    "name": "Lt. Surge",
+                    "rarity": "2diamond",
+                    "id": "A1226"
+                },
+                {
+                    "name": "Squirtle",
+                    "rarity": "1star",
+                    "id": "A1232"
+                },
+                {
+                    "name": "Gyarados",
+                    "rarity": "1star",
+                    "id": "A1233"
+                },
+                {
+                    "name": "Electrode",
+                    "rarity": "1star",
+                    "id": "A1235"
+                },
+                {
+                    "name": "Diglett",
+                    "rarity": "1star",
+                    "id": "A1238"
+                },
+                {
+                    "name": "Nidoqueen",
+                    "rarity": "1star",
+                    "id": "A1240"
+                },
+                {
+                    "name": "Nidoking",
+                    "rarity": "1star",
+                    "id": "A1241"
+                },
+                {
+                    "name": "Eevee",
+                    "rarity": "1star",
+                    "id": "A1248"
+                },
+                {
+                    "name": "Snorlax",
+                    "rarity": "1star",
+                    "id": "A1250"
+                },
+                {
+                    "name": "Arcanine ex",
+                    "rarity": "2star",
+                    "id": "A1254"
+                },
+                {
+                    "name": "Blastoise ex",
+                    "rarity": "2star",
+                    "id": "A1256"
+                },
+                {
+                    "name": "Pikachu ex",
+                    "rarity": "2star",
+                    "id": "A1259"
+                },
+                {
+                    "name": "Zapdos ex",
+                    "rarity": "2star",
+                    "id": "A1260"
+                },
+                {
+                    "name": "Wigglytuff ex",
+                    "rarity": "2star",
+                    "id": "A1265"
+                },
+                {
+                    "name": "Misty",
+                    "rarity": "2star",
+                    "id": "A1267"
+                },
+                {
+                    "name": "Brock",
+                    "rarity": "2star",
+                    "id": "A1271"
+                },
+                {
+                    "name": "Lt. Surge",
+                    "rarity": "2star",
+                    "id": "A1273"
+                },
+                {
+                    "name": "Zapdos ex",
+                    "rarity": "2star",
+                    "id": "A1276"
+                },
+                {
+                    "name": "Wigglytuff ex",
+                    "rarity": "2star",
+                    "id": "A1279"
+                },
+                {
+                    "name": "Pikachu ex",
+                    "rarity": "3star",
+                    "id": "A1281"
+                },
+                {
+                    "name": "Charizard ex",
+                    "rarity": "crown",
+                    "id": "A1284"
+                },
+                {
+                    "name": "Pikachu ex",
+                    "rarity": "crown",
+                    "id": "A1285"
+                },
+                {
+                    "name": "Mewtwo ex",
+                    "rarity": "crown",
+                    "id": "A1286"
+                }
+            ]
+        }
+    ]
+}
