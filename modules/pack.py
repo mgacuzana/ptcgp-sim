@@ -34,9 +34,9 @@ class Pack:
                 time.sleep(0.5)
             rare_pack_check = np.random.rand()
             if rare_pack_check < self.rare_pack_rate: # RARE PACK
+                sys.stdout.write(f"WOOWWWWW YOU GOT A RARE PACK!!! This only occurs {self.rare_pack_rate*100}% of the time!!\n")
                 for x in range(5):
-                    sys.stdout.write(f"WOOWWWWW YOU GOT A RARE PACK!!! This only occurs {self.rare_pack_rate*100}% of the time!!\n")
-                    card = np.random.choice(self.available, 1, replace=True, p=self.probs[5])
+                    card = np.random.choice(self.available, 1, replace=True, p=self.probs[5])[0]
                     sys.stdout.write(f"Opened: {card}!\n")
                     if not instantaneous:
                         time.sleep(0.5)
