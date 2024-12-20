@@ -6,7 +6,7 @@ import sys
 from consts import parse_rarity_str
 from modules.expansion import Expansion
 from modules.pack import Pack
-from modules.card import Card
+from modules.card import Card, parse_card_str
 from modules.collection import Collection
 
 def load_expansions(*args):
@@ -48,6 +48,18 @@ def load_expansions(*args):
         expansions.append(Expansion(name, set_code, packs))
     expansions.sort(key=lambda exp: exp.set_code)
     return expansions
+
+def load_collection(filename):
+    file = open(filename, encoding="utf-8")
+    collection = Collection()
+    collection_json = json.load(file)
+    try:
+        for card_str in collection_json.keys():
+            collection.add(parse_card_str(card_str))
+    except (AttributeError, ValueError) as e:
+        raise ValueError(f"Could not parse {filename}, please check formatting: {e}", file, 0)
+
+    return collection
 
 def save_collection(filename, collection, overwrite=False):
     base_path = get_script_folder() / "collections"

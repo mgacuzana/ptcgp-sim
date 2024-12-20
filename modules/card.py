@@ -37,8 +37,9 @@ class Card:
         return hash(self.id)
 
 def parse_card_str(card_str):
-    pattern = re.compile(r'([\w ]+) \(([◊☆♕]+) (\w+)\)')
+    raw_pattern = r'([\w ]+) \(([◊☆♕]+) (\w+)\)'
+    pattern = re.compile(raw_pattern)
     matches = pattern.match(card_str)
     if not matches:
-        raise ValueError(f"{card_str} does not match pattern {pattern}")
+        raise ValueError(f"'{card_str}' does not match pattern {raw_pattern}")
     return Card(matches.group(1), parse_rarity_str(matches.group(2)), matches.group(3))
