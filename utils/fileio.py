@@ -3,7 +3,7 @@ import json
 import os
 import sys
 
-from consts import rarity_str_to_enum
+from consts import parse_rarity_str
 from modules.expansion import Expansion
 from modules.pack import Pack
 from modules.card import Card
@@ -28,7 +28,7 @@ def load_expansions(*args):
             pack_name = pack_json["name"]
             cards = [
                 Card(name=card_json["name"],
-                     rarity=rarity_str_to_enum(card_json["rarity"]),
+                     rarity=parse_rarity_str(card_json["rarity"]),
                      id=card_json["id"]
                     )
                 for card_json in pack_json["cards"]
@@ -77,5 +77,5 @@ def get_script_folder():
 def _handle_rarity_json(rarity_json):
     rarity_rate = {}
     for rarity_str, p in rarity_json.items():
-        rarity_rate[rarity_str_to_enum(rarity_str)] = p
+        rarity_rate[parse_rarity_str(rarity_str)] = p
     return rarity_rate
