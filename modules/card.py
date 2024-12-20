@@ -25,10 +25,10 @@ class Card:
         return False
 
     def __str__(self):
-        return f"{self.name} ({self.rarity.name} {self.id})"
+        return f"{self.name} ({self.rarity.value} {self.id})"
 
     def __repr__(self):
-        return f"{self.name} ({self.rarity.name} {self.id})"
+        return f"{self.name} ({self.rarity.value} {self.id})"
 
     def __hash__(self):
         return hash(self.id)
