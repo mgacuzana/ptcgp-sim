@@ -1,3 +1,6 @@
+import re
+from consts import parse_rarity_str
+
 class Card:
     def __init__(self, name, rarity, id, card_type="", attack1="", attack2="", weakness="", retreat="", knockout_value=1):
         self.name = name
@@ -32,3 +35,10 @@ class Card:
 
     def __hash__(self):
         return hash(self.id)
+
+def parse_card_str(card_str):
+    pattern = re.compile(r'([\w ]+) \(([◊☆♕]+) (\w+)\)')
+    matches = pattern.match(card_str)
+    if not matches:
+        raise Exception(f"{card_str} does not match pattern {pattern}")
+    return Card(matches.group(1), parse_rarity_str(matches.group(2)), matches.group(3))
