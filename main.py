@@ -6,16 +6,14 @@ import sys
 from modules.collection import Collection
 from modules.expansion import Expansion
 from modules.pack import Pack
-from utils.fileio import load_expansions, save_collection
+from utils.fileio import load_expansions, load_collection, save_collection
 
 def main():
-    arguments = sys.argv[1:]
-    short_opts = "b"
-    long_opts = ["batch-mode"]
-    selected_opts, vals = getopt.getopt(arguments, short_opts, long_opts)
-    flags = [key for key, val in selected_opts if val == '']
-    in_batch_mode = "--batch-mode" in flags or "-b" in flags
-
+    in_batch_mode, existing_collection = handle_opts()
+    if existing_collection and os.path.exists(existing_collection):
+        pass
+    else:
+        collection = Collection()
     all_expansions = load_expansions("genetic-apex.json", "mythical-island.json")
 
     expansion = prompt_expansion_selection(all_expansions)
@@ -25,7 +23,6 @@ def main():
     sys.stdout.write(f"Opening {num_packs} packs of {expansion}!\n")
     if not in_batch_mode:
         time.sleep(1.5)
-    collection = Collection()
     rare_pack_count = 0
     packs = [Pack(pack_type.name, pack_type.available, pack_type.pull_rates, pack_type.rare_pack_rate) for _ in range(num_packs)]
     for x, pack in enumerate(packs):
