@@ -6,7 +6,7 @@ import sys
 from modules.collection import Collection
 from modules.expansion import Expansion
 from modules.pack import Pack
-from utils.fileio import load_expansions
+from utils.fileio import load_expansions, save_collection
 
 def main():
     arguments = sys.argv[1:]
@@ -16,7 +16,7 @@ def main():
     flags = [key for key, val in selected_opts if val == '']
     in_express_mode = "--express-mode" in flags or "-e" in flags
 
-    all_expansions = load_expansions("./expansion-files/genetic-apex.json", "./expansion-files/mythical-island.json")
+    all_expansions = load_expansions("genetic-apex.json", "mythical-island.json")
 
     expansion = prompt_expansion_selection(all_expansions)
     pack_type, expansion = prompt_pack_selection(expansion, all_expansions)
@@ -41,13 +41,8 @@ def main():
     sys.stdout.write(str(collection))
     sys.stdout.write(f"\nRare pack count: {rare_pack_count}\n")
 
-    # TODO: Add save collection to file
-    #     
-    # save_desired = input("\nSave results to file? (y/n, default n)\n")
-    # if len(save_desired) > 0 and save_desired[0] == 'y':
-    #     save_filename = input("File name (default is collection-{timestamp}.json): ")
-    #     if len(save_filename) == 0:
-    #         save_filename = f"collection-{datetime.now()}.json"
+    prompt_save_collection(collection)
+
 
 def prompt_expansion_selection(expansions):
     """
@@ -110,6 +105,22 @@ def prompt_number_of_packs(pack_type, expansion, all_expansions):
             sys.stderr.write(f"You entered {num_packs}, please select a valid number of packs to open (positive int).\n")
             num_packs = None
     return num_packs, pack_type, expansion
+
+def prompt_save_collection(collection):
+    save_desired = input("\nSave results to file? (y/n, default n) ")
+    if len(save_desired) > 0 and save_desired[0] == 'y':
+        saved = False
+        while not saved:
+            save_filename = input("File name (default is collection-{timestamp}.json): ")
+            if len(save_filename) == 0:
+                save_filename = f"collection-{datetime.now().strftime("%Y-%m-%dT%H%M%S")}.json"
+            elif not save_filename.endswith(".json"):
+                save_filename += ".json"
+            saved = save_collection(save_filename, collection)
+            if not saved:
+                overwrite = input("File already exists. Would you like to overwrite? (y/n, default n) ")
+                if overwrite.startswith('y'):
+                    saved = save_collection(save_filename, collection, overwrite=True)
 
 if __name__ == "__main__":
     main()
