@@ -7,19 +7,23 @@ from modules.card import Card
 
 class Pack:
     def __init__(self, name="Dummy Pack", available_cards=[], pull_rates=[], rare_pack_rate=0.00050):
+        # Traits shared among ALL packs of this type
         self.name = name
-        self.unopened = True
-        self.cards = [] # represents the 5 cards actually present in THIS pack
+        self.available = np.array(available_cards, dtype=Card)
+        self.pull_rates = pull_rates
         self.rare_pack_rate = rare_pack_rate
 
-        self.pull_rates = pull_rates
+        # Traits unique to THIS pack
+        self.is_rare = None # set to True or False when self.open is called
+        self.unopened = True # set to False when self.open is called
+        self.cards = [] # cards are generated when pack is opened
+
         # self.available is a array of cards available in packs of this type. Array indices matter for aligning probabilities for np.random.choice
         # self.probs is a 2D array of length 6
         # self.probs[0] is a array representing each card's probability of being drawn as the FIRST card of a regular pack,
         # self.probs[1] is a array representing each card's probability of being drawn as the SECOND card of a regular pack,
         # etc...
         # self.probs[5] is a array representing each card's probability of being drawn as ANY card in a RARE PACK
-        self.available = np.array(available_cards, dtype=Card)
         self.probs = np.ndarray((6, len(self.available)))
         for pack_position in range(6):
             for y, card in enumerate(self.available):
@@ -35,6 +39,7 @@ class Pack:
             rare_pack_check = np.random.rand()
             if rare_pack_check < self.rare_pack_rate: # RARE PACK
                 sys.stdout.write(f"WOOWWWWW YOU GOT A RARE PACK!!! This only occurs {self.rare_pack_rate*100}% of the time!!\n")
+                self.is_rare = True
                 for x in range(5):
                     card = np.random.choice(self.available, 1, replace=True, p=self.probs[5])[0]
                     sys.stdout.write(f"Opened: {card}!\n")
@@ -42,12 +47,14 @@ class Pack:
                         time.sleep(0.5)
                     self.cards.append(card)
             else: # REGULAR PACK
+                self.is_rare = False
                 for x in range(5):
                     card = np.random.choice(self.available, 1, replace=True, p=self.probs[x])[0]
                     sys.stdout.write(f"Opened: {card}!\n")
                     if not instantaneous:
                         time.sleep(0.5)
                     self.cards.append(card)
+            self.unopened = False
 
             sys.stdout.write(f"Summary: {str(self.cards)}\n\n")
             return self.cards

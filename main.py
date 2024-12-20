@@ -26,9 +26,12 @@ def main():
     if not in_express_mode:
         time.sleep(1.5)
     collection = Collection()
+    rare_pack_count = 0
     packs = [Pack(pack_type.name, pack_type.available, pack_type.pull_rates, pack_type.rare_pack_rate) for _ in range(num_packs)]
     for x, pack in enumerate(packs):
         received = pack.open(instantaneous=in_express_mode)
+        if pack.is_rare:
+            rare_pack_count += 1
         for card in received:
             collection.add(card)
         if x < len(packs) - 1 and not in_express_mode:
@@ -36,6 +39,7 @@ def main():
 
     sys.stdout.write("Summary of final results:\n")
     sys.stdout.write(str(collection))
+    sys.stdout.write(f"\nRare pack count: {rare_pack_count}\n")
 
     # TODO: Add save collection to file
     #     
