@@ -1,14 +1,14 @@
 from enum import Enum
 
 class Rarity(Enum):
-    DIAMOND_1 = 1
-    DIAMOND_2 = 2
-    DIAMOND_3 = 3
-    DIAMOND_4 = 4
-    STAR_1 = 5
-    STAR_2 = 6
-    STAR_3 = 7
-    CROWN = 8
+    DIAMOND_1 = '◊'
+    DIAMOND_2 = '◊◊'
+    DIAMOND_3 = '◊◊◊'
+    DIAMOND_4 = '◊◊◊◊'
+    STAR_1 = '☆'
+    STAR_2 = '☆☆'
+    STAR_3 = '☆☆☆'
+    CROWN = '♕'
 
 def rarity_str_to_enum(rarity_str):
     match rarity_str:
