@@ -1,6 +1,7 @@
 class Collection:
-    def __init__(self):
+    def __init__(self, sort_order="rarity"):
         self.collection = {}
+        self.sort_order = sort_order
 
     def add(self, card):
         if card in self.collection:
@@ -8,9 +9,14 @@ class Collection:
         else:
             self.collection[card] = 1
 
+    def items(self):
+        listed_items = list(self.collection.items())
+        listed_items.sort(key=lambda x: x[0].rarity)
+        return listed_items
+
     def __str__(self):
         string = "{\n"
-        for card, count in self.collection.items():
+        for card, count in self.items():
             string += f"\t{str(card)}: {str(count)}\n"
         string += "}"
         return string

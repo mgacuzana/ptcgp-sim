@@ -10,6 +10,9 @@ class Rarity(Enum):
     STAR_3 = '☆☆☆'
     CROWN = '♕'
 
+    def __lt__(self, other):
+        return self.value < other.value
+
 def rarity_str_to_enum(rarity_str):
     match rarity_str:
         case "1diamond":
