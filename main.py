@@ -16,14 +16,11 @@ def main():
     flags = [key for key, val in selected_opts if val == '']
     in_express_mode = "--express-mode" in flags or "-e" in flags
 
-    all_expansions = load_expansions('./expansion-files/mythical-island.json')
+    all_expansions = load_expansions("./expansion-files/genetic-apex.json", "./expansion-files/mythical-island.json")
 
     expansion = prompt_expansion_selection(all_expansions)
-    pack_type = prompt_pack_selection(expansion, all_expansions)
-    sys.stdout.write(f"===== AVAILABLE CARDS IN {expansion.name} {[pack_type.name]} =====\n")
-    sys.stdout.write(str(pack_type.available))
-    sys.stdout.write("\n")
-    num_packs = prompt_number_of_packs(expansion, all_expansions)
+    pack_type, expansion = prompt_pack_selection(expansion, all_expansions)
+    num_packs, pack_type, expansion = prompt_number_of_packs(pack_type, expansion, all_expansions)
 
     sys.stdout.write(f"Opening {num_packs} packs of {expansion}!\n")
     if not in_express_mode:
@@ -70,10 +67,10 @@ def prompt_expansion_selection(expansions):
     return expansions[selected]
 
 def prompt_pack_selection(selected_exp, expansions):
-    names = [pack.name for pack in selected_exp.packs]
     selected = None
     while type(selected) is not int:
         try:
+            names = [pack.name for pack in selected_exp.packs]
             sys.stdout.write(f"===== AVAILABLE PACKS IN {selected_exp.name} =====\n")
             for i in range(len(names)):
                 sys.stdout.write(f"{i}: {names[i]}\n")
@@ -83,29 +80,32 @@ def prompt_pack_selection(selected_exp, expansions):
                 raise ValueError
             elif selected == len(names):
                 sys.stdout.write("\n")
-                prompt_expansion_selection(expansions)
+                selected_exp = prompt_expansion_selection(expansions)
                 selected = None
         except ValueError:
             sys.stderr.write(f"You entered {selected}, please select a valid int value matching an available pack within {selected_exp.name}.\n")
             selected = None
     sys.stdout.write(f"You selected {selected}: {names[selected]}\n")
-    return selected_exp.packs[selected]
+    return selected_exp.packs[selected], selected_exp
 
-def prompt_number_of_packs(expansion, all_expansions):
+def prompt_number_of_packs(pack_type, expansion, all_expansions):
     num_packs = None
     while type(num_packs) is not int:
         try:
+            sys.stdout.write(f"===== AVAILABLE CARDS IN {expansion.name} - {pack_type.name} =====\n")
+            sys.stdout.write(str(pack_type.available))
+            sys.stdout.write("\n")
             num_packs = int(input("How many packs will you open? (0 to return to pack selection)\n"))
             if num_packs < 0:
                 raise ValueError
             elif num_packs == 0:
                 sys.stdout.write("\n")
-                prompt_pack_selection(expansion, all_expansions)
+                pack_type, expansion = prompt_pack_selection(expansion, all_expansions)
                 num_packs = None
         except ValueError:
             sys.stderr.write(f"You entered {num_packs}, please select a valid number of packs to open (positive int).\n")
             num_packs = None
-    return num_packs
+    return num_packs, pack_type, expansion
 
 if __name__ == "__main__":
     main()
