@@ -50,7 +50,14 @@ def load_expansions(*args):
     return expansions
 
 def load_collection(filename):
-    file = open(filename, encoding="utf-8")
+    base_path = get_script_folder() / "collections"
+    if not os.path.exists(base_path):
+        os.makedirs(base_path)
+
+    full_path = base_path / filename
+    if not os.path.exists(full_path):
+        raise FileNotFoundError(full_path)
+    file = open(full_path, encoding="utf-8")
     collection = Collection()
     collection_json = json.load(file)
     try:
