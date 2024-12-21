@@ -37,7 +37,7 @@ class Card:
         return hash(self.id)
 
 def parse_card_str(card_str):
-    raw_pattern = r'([\w ]+) \(([◊☆♕]+) (\w+)\)'
+    raw_pattern = r'(.+) \(([◊☆♕]+) (\w+)\)'
     pattern = re.compile(raw_pattern)
     matches = pattern.match(card_str)
     if not matches:
