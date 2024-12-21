@@ -50,6 +50,8 @@ If saving results to files during development, the generated JSON is stored at `
 
 This project uses pytest for its unit tests. Refer to the [pytest docs](https://docs.pytest.org/en/stable/getting-started.html) for help authoring unit tests.
 
+If you need to mock a dependency for a test, please use `unittest.mock` rather than `monkeypatch` for project consistency.
+
 Run the following command from your local `ptcgp-sim` directory:
 
 ```bash
