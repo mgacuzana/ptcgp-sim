@@ -11,13 +11,23 @@ TBD -- need to create a release executable first
 - Clone/download/fork the `ptcgp-sim` repository
 - [Install Python](https://wiki.python.org/moin/BeginnersGuide/Download)
 
-Run the following commands from your local `ptcgp-sim` directory:
+From your local `ptcgp-sim` directory:
+
+- Create and activate a Python virtual environment (venv). If you are using PowerShell:
 
 ```bash
-pip install -r requirements.txt
+python3 -m venv ptcgp-sim
+./ptcgp-sim/Scripts/activate
+```
+Your prompt will show `(ptcgp-sim)` at the start if your venv is active.
+
+- Install Python package requirements:
+
+```bash
+python3 -m pip install -r requirements.txt
 ```
 
-This will install the python packages that the simulator requires.
+**Note**: To deactivate your `ptcgp-sim` venv, type `deactivate` and you will return to your user Python environment.
 
 ### Running the simulator
 
