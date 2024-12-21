@@ -72,6 +72,11 @@ class TestPack:
         assert p.cards == expected
         assert actual == expected
 
+    def test_open_already_opened(self, fake_cards, fake_pull_rates):
+        p = Pack("Omnimon", available_cards=fake_cards, pull_rates=fake_pull_rates)
+        p.open(instantaneous=True)
+        assert p.open(instantaneous=True) is None
+
 @pytest.fixture
 def set_seed():
     np.random.seed(1)
