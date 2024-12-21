@@ -1,5 +1,6 @@
 from datetime import datetime
 import getopt
+import os
 import time
 import sys
 
@@ -9,7 +10,14 @@ from modules.pack import Pack
 from utils.fileio import load_expansions, load_collection, save_collection
 
 def main():
-    in_batch_mode = handle_opts()
+    in_batch_mode, existing_collection_filename = handle_opts()
+    if existing_collection_filename:
+        try:
+            existing_collection = load_collection(existing_collection_filename)
+            sys.stdout.write(f"Adding to existing collection:\n{str(existing_collection)}\n\n")
+        except FileNotFoundError as e:
+            sys.stderr.write(f"File not found: {str(e)}")
+            sys.exit(1)
     all_expansions = load_expansions("genetic-apex.json", "mythical-island.json")
 
     expansion = prompt_expansion_selection(all_expansions)
@@ -19,6 +27,7 @@ def main():
     sys.stdout.write(f"Opening {num_packs} packs of {expansion}!\n")
     if not in_batch_mode:
         time.sleep(1.5)
+    new_collection = Collection()
     rare_pack_count = 0
     packs = [Pack(pack_type.name, pack_type.available, pack_type.pull_rates, pack_type.rare_pack_rate) for _ in range(num_packs)]
     for x, pack in enumerate(packs):
@@ -26,24 +35,42 @@ def main():
         if pack.is_rare:
             rare_pack_count += 1
         for card in received:
-            collection.add(card)
+            new_collection.add(card)
         if x < len(packs) - 1 and not in_batch_mode:
             input("\nPress any character to continue...")
 
-    sys.stdout.write("Summary of final results:\n")
-    sys.stdout.write(str(collection))
+    sys.stdout.write("Summary of opening results:\n")
+    sys.stdout.write(str(new_collection))
     sys.stdout.write(f"\nRare pack count: {rare_pack_count}\n")
 
-    prompt_save_collection(collection)
+    if existing_collection_filename:
+        existing_collection += new_collection
+        sys.stdout.write("Final collection:\n")
+        sys.stdout.write(f"{str(existing_collection)}\n")
+        prompt_save_collection(existing_collection)
+    else:
+        prompt_save_collection(new_collection)
+
 
 def handle_opts():
+    in_batch_mode = False
+    existing_collection_filename = None
+
     arguments = sys.argv[1:]
-    short_opts = "b"
-    long_opts = ["batch-mode"]
-    selected_opts, vals = getopt.getopt(arguments, short_opts, long_opts)
-    flags = [key for key, val in selected_opts if val == '']
-    in_batch_mode = "--batch-mode" in flags or "-b" in flags
-    return in_batch_mode
+    short_opts = "bI:"
+    long_opts = ["batch-mode", "use-collection="]
+    selected_opts, _ = getopt.getopt(arguments, short_opts, long_opts)
+    for opt, val in selected_opts:
+        if opt in ("-b", "--batch-mode"):
+            in_batch_mode = True
+        elif opt in ("-I", "--use-collection"):
+            if val.endswith(".json"):
+                existing_collection_filename = val
+            else:
+                existing_collection_filename = f"{val}.json"
+    # flags = [key for key, val in selected_opts if val == '']
+    # in_batch_mode = "--batch-mode" in flags or "-b" in flags
+    return in_batch_mode, existing_collection_filename
 
 def prompt_expansion_selection(expansions):
     """
