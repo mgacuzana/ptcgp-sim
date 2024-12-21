@@ -24,3 +24,11 @@ class Collection:
             string += "\n"
         string += "}"
         return string
+
+    def __iadd__(self, other):
+        for card in other.collection:
+            if card in self.collection:
+                self.collection[card] += other.collection[card]
+            else:
+                self.collection[card] = other.collection[card]
+        return self

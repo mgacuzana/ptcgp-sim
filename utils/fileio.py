@@ -3,10 +3,10 @@ import json
 import os
 import sys
 
-from consts import rarity_str_to_enum
+from consts import parse_rarity_str
 from modules.expansion import Expansion
 from modules.pack import Pack
-from modules.card import Card
+from modules.card import Card, parse_card_str
 from modules.collection import Collection
 
 def load_expansions(*args):
@@ -28,7 +28,7 @@ def load_expansions(*args):
             pack_name = pack_json["name"]
             cards = [
                 Card(name=card_json["name"],
-                     rarity=rarity_str_to_enum(card_json["rarity"]),
+                     rarity=parse_rarity_str(card_json["rarity"]),
                      id=card_json["id"]
                     )
                 for card_json in pack_json["cards"]
@@ -48,6 +48,25 @@ def load_expansions(*args):
         expansions.append(Expansion(name, set_code, packs))
     expansions.sort(key=lambda exp: exp.set_code)
     return expansions
+
+def load_collection(filename):
+    base_path = get_script_folder() / "collections"
+    if not os.path.exists(base_path):
+        os.makedirs(base_path)
+
+    full_path = base_path / filename
+    if not os.path.exists(full_path):
+        raise FileNotFoundError(full_path)
+    file = open(full_path, encoding="utf-8")
+    collection = Collection()
+    collection_json = json.load(file)
+    try:
+        for card_str in collection_json.keys():
+            collection.add(parse_card_str(card_str))
+    except (AttributeError, ValueError) as e:
+        raise ValueError(f"Could not parse {filename}, please check formatting: {e}", file, 0)
+
+    return collection
 
 def save_collection(filename, collection, overwrite=False):
     base_path = get_script_folder() / "collections"
@@ -77,5 +96,5 @@ def get_script_folder():
 def _handle_rarity_json(rarity_json):
     rarity_rate = {}
     for rarity_str, p in rarity_json.items():
-        rarity_rate[rarity_str_to_enum(rarity_str)] = p
+        rarity_rate[parse_rarity_str(rarity_str)] = p
     return rarity_rate
