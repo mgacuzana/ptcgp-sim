@@ -2,7 +2,11 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 
 ### PTCGP-Sim specific
+# User-generated collections
 collections/
+# default venv location
+ptcgp-sim/
+.idea/
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
