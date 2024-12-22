@@ -2,7 +2,9 @@
 
 ## User Guide
 
-TBD -- need to create a release executable first
+To run the script without installing Python, check out the latest release at https://github.com/mgacuzana/ptcgp-sim/releases/
+
+There is a detailed guide there on downloading and running the script.
 
 ## Development Guide
 
