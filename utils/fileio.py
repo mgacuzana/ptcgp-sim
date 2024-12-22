@@ -15,7 +15,12 @@ def load_expansions(*args):
         @returns objects representing all expansion
     """
     expansions = []
-    current = Path(".")
+    if getattr(sys, 'frozen', False):
+        script_path = Path(os.path.dirname(sys.executable))
+        current = script_path / "_internal"
+    else:
+        current = Path(".")
+
     expansions_path = current / "expansion-files"
     for filename in args:
         full_path = expansions_path / filename
