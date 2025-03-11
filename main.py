@@ -114,13 +114,11 @@ class MainWindow(QMainWindow):
 
     def startUIPackSelectionTab(self):
 
-        #because the Pack selectin tab can only be started from the expansion selection tab, the selected expansion can always be selected at the address below
-        selected_exp = self.centralWidget().layout().itemAt(1).itemAt(0).widget().text()
-        
-        pack_list = None
-        for expansion in self.all_expansions:
-            if expansion.__str__() == selected_exp:
-                pack_list = expansion.packs
+        #Picking an expansion button on the expansion tab sets one of the expansions to be the selected_exp attribute
+        #which is called here at the creation of the pack selection tab creation to get a pack_list
+        selected_exp = self.uiExpansionsTab.selected_exp
+        pack_list = selected_exp.packs
+
         if pack_list is None:
             #!!HIGH PROIRITY TO IMPLEMENT
             print("They didn't select an expansion in the list. Tell them off about it in a Dialog box.")

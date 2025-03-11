@@ -20,7 +20,8 @@ class UIExpansionsTab(object):
         self.centralwidget = QWidget(MainWindow)
 
         #Set the window size to fit all of the buttons that will be created
-        num_buttons = len(all_expansions)
+        self.all_expansions = all_expansions
+        num_buttons = len(self.all_expansions)
         width = 600*num_buttons
         MainWindow.setGeometry(50, 50, width, 900)
 
@@ -29,24 +30,23 @@ class UIExpansionsTab(object):
         #Generate expansion selection buttons and place them next to eachother in an HBox
         self.buttons_hbox = QHBoxLayout()
         buttons = []
-        for i, expansion in enumerate(all_expansions):
+        for i, expansion in enumerate(self.all_expansions):
             buttons.append( QPushButton(expansion.__str__(), self.centralwidget))
 
             #Connect each button to a lambda function calling pack selection with its own expansion
             #I do no know why the 'ch' argument is required, but I'm guessing it relates to the self argument
-            buttons[i].clicked.connect(lambda ch, i= expansion: self.expansionSelection(i))
+            buttons[i].clicked.connect(lambda ch, i = i, exp = expansion: self.expansionSelection(i, exp))
 
             self.buttons_hbox.addWidget(buttons[i])
             buttons[i].setFixedHeight(900)
 
         #Create a bottom row of buttons to return to the main navigation page or proceed to selection
-        self.SelectedExp = QLineEdit("Pick an expansion")
+        #self.SelectedExp = QLineEdit("Pick an expansion")
         self.PacksBTN = QPushButton("Select")
         self.BackBTN = QPushButton("Back", self.centralwidget)
         #self.BackBTN.move(100, 350)
 
         bottom_row = QHBoxLayout()
-        bottom_row.addWidget(self.SelectedExp)
         bottom_row.addWidget(self.PacksBTN)
         bottom_row.addWidget(self.BackBTN)
 
@@ -59,9 +59,14 @@ class UIExpansionsTab(object):
         self.centralwidget.setLayout(main_layout)
         MainWindow.setCentralWidget(self.centralwidget)
 
-    def expansionSelection(self, selected_exp):
-        #this text can be accessed when setting up the uiPackSelectionTab by indexing into the centralwidget(which will be this tab)
-        self.SelectedExp.setText(selected_exp.__str__())
+    def expansionSelection(self, expansion_id, selected_exp):
+        #this attribute is tied to the expansion tab itself which can be accessed by the mainwindow object during startUIPackSelectionTab(self):
+        self.selected_exp = selected_exp
+
+
+        for i in range(self.buttons_hbox.count()):
+            self.buttons_hbox.itemAt(i).widget().setStyleSheet("background-color:#ffffff;")
+        self.buttons_hbox.itemAt(expansion_id).widget().setStyleSheet("background-color:#c0c8cf;")
 
 
 
@@ -187,8 +192,8 @@ class UIPackSelectionTab(object):
         self.selected_pack = pack_type
 
         for i in range(self.buttons_hbox.count()):
-            self.buttons_hbox.itemAt(i).widget().setStyleSheet("background-color:#ffffff;");
-        self.buttons_hbox.itemAt(pack_type_id).widget().setStyleSheet("background-color:#c0c8cf;");
+            self.buttons_hbox.itemAt(i).widget().setStyleSheet("background-color:#ffffff;")
+        self.buttons_hbox.itemAt(pack_type_id).widget().setStyleSheet("background-color:#c0c8cf;")
 
 
     def openPacks(self):
